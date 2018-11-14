@@ -1,0 +1,119 @@
+	Exploring Git - Logical Flow
+
+Open Git Bash - the command interface and execute the following.
+
+**************************************************************************************************
+
+1. Setting up configuration
+
+git config --global user.name <name>
+git config --global user.email <mail id>
+git config -–list
+
+**************************************************************************************************
+
+2. Initiating Git Repository through Git Bash
+
+In windows, Create this folder structure
+C:/<your-name>/<repository-name>
+
+In Git Bash, try the following.
+
+cd C:/<your-name>/<repository-name>
+git init
+cd .git
+ls
+
+**************************************************************************************************
+
+3. Creating Repository in Git Hub
+
+Visit https://github.com/join
+Sign up
+Log in 
+
+Create repository (Refer to the lab manual document for screenshots)
+Create file
+Commit
+Modify existing file
+Commit
+
+**************************************************************************************************
+
+4. Cloning a repository from remote to local
+
+Switch to Git Bash, navigate to C:/<your-name>
+git clone <web url of the repository in git hub>
+
+**************************************************************************************************
+
+5. Making changes in the cloned repository and pushing back to remote repository
+
+Navigate to C:/<repositiry created in step 4>
+git checkout -b develop
+
+touch test
+git add .
+git status
+git commit -m "New file added"
+git push -u origin develop
+git checkout master
+git merge develop
+git push
+
+In Git hub, Refresh and see the test file
+
+**************************************************************************************************
+
+6. Creating checkpoints for Commits
+
+git tag v1
+
+touch file1
+touch file2
+git add .
+git commit -m "file1 and file2 added"
+git tag v2
+
+touch file3
+git add .
+git commit -m "file 3 added"
+git tag v3
+
+git checkout v1
+Folders - In Windows, navigate to C:\<Your-Name>\<Repository-Name> and observe
+
+git checkout v2
+Folders - In Windows, navigate to C:\<Your-Name>\<Repository-Name> and observe
+
+git show v1
+git show v2
+git tag
+git log
+
+**************************************************************************************************
+
+7. Renaming the placeholder for remote repository location
+
+git remote -v
+Folders - In Windows, navigate to C:\<Your-Name>\<Repository-Name>\.git\refs\remotes and observe
+
+git remote rename origin source
+Folders - In Windows, navigate to C:\<Your-Name>\<Repository-Name>\.git\refs\remotes and observe
+
+**************************************************************************************************
+
+8. Reflecting a change in remote repository on to local repository
+
+Cloned a repository from GitHub on to local
+In GitHub, Add a new file to the existing repository
+
+In Git Bash,
+Git Pull
+ls (Observe the files that are listed)
+
+
+
+
+
+
